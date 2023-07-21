@@ -1,0 +1,16 @@
+terraform.tfstate
+*.tfstate
+*.backup
+.hcl
+*/*/.txt
+*.pem
+*/*/.pem
+*/.lock.hcl
+.terraform
+*.backup
+*/.terraform
+*/terraform.tfstate
+*.hcl
+*.txt
+*/.tfstate
+**/**/.tfstate
