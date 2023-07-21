@@ -19,6 +19,7 @@ resource "aws_instance" "web" {
   ami           = data.aws_ami.my_ami.id
   instance_type = var.instance_type
   key_name = "fsa-kp-ib"
+  security_groups = [ "${aws_security_group.my_sg.name}" ]
   tags = {
     Name = "${var.owner}-ec2-test"
     Formation= "terraform"
