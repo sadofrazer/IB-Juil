@@ -38,7 +38,7 @@ resource "aws_instance" "web" {
   }
 
   tags = {
-    Name = "${var.owner}-ec2-test"
+    Name = "${var.owner}-${var.env}-ec2-test"
     Formation= "terraform"
   }
 }
@@ -54,7 +54,7 @@ resource "aws_eip" "my_eip" {
 
 
 resource "aws_security_group" "my_sg" {
-  name        = "allow_http_s"
+  name        = "allow_http_s-${var.env}"
   description = "Allow HTTP/HTTPS inbound traffic"
 
   ingress {
@@ -89,7 +89,7 @@ resource "aws_security_group" "my_sg" {
   }
 
   tags = {
-    Name = "${var.owner}-sg-allow_http_s"
+    Name = "${var.owner}-sg-allow_http_s--${var.env}"
   }
 }
 

@@ -9,3 +9,7 @@ variable "owner" {
     default = "fsa"
 }
 
+variable "env" {
+  type = string
+}
+
