@@ -14,3 +14,6 @@ terraform.tfstate
 *.txt
 */.tfstate
 **/**/.tfstate
+**/**/.lock.info
+*/.lock.info
+.lock.info
